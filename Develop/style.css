@@ -39,7 +39,13 @@ textarea{
 .hour {
   background-color: #ffffff;
   color: #000000;
+  text-align: center;
+  padding: 10px ;
   border-top: 1px dashed #000000;
+}
+
+.doubleDigit {
+  padding-left: 1px;
 }
 
 .past {
@@ -63,6 +69,7 @@ textarea{
   border-bottom-right-radius: 15px;
   background-color: #06AED5;
   color: white;
+  background: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.onlinewebfonts.com%2Fsvg%2Fimg_325391.png&f=1&nofb=1");
 }
 
 .saveBtn i:hover {
