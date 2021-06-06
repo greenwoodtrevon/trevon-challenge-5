@@ -78,8 +78,8 @@ $('.description').on('click', function(){
 });
 
 $(".saveBtn").on("click", function() {
-  console.log('okie dokie');
-
+  var text = $(this).next('p.description').value;
+  console.log(text);
 });
 
 displayDate();
