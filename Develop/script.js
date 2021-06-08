@@ -3,8 +3,6 @@ var currentHour24 = moment().format("HH");
 var currentHour12 = moment().format('hh');
 var descriptionEl = $(".description");
 
-var sos = false;
-
 var nineA = $("#9A");
 var tenA = $("#10A");
 var elevA = $("#11A");
@@ -56,9 +54,10 @@ var checkAllTimes = function() {
 };
 
 $('.description').on('click', function(){
-  var className = $(this).attr('class')
-  console.log(className);
+  var className = $(this).attr('class');
   var $el = $(this);
+  var elId = $el.attr("id");
+  console.log(elId);
               
   var task = $('<input/>')
     .addClass(className)
@@ -69,17 +68,20 @@ $('.description').on('click', function(){
   var save = function(){
     var $p = $('<p/>')
       .addClass(className)
+      .attr('id', elId)
       .text(task.val());
+      
     task.replaceWith($p);
+
     
   };
   task.on('blur', save).focus();
-  checkAllTimes();
+  
 });
 
 $(".saveBtn").on("click", function() {
-  var text = $(this).next('p.description').value;
-  console.log(text);
+  var taskText = $(this).next().val();
+  console.log(taskText);
 });
 
 displayDate();
