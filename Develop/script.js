@@ -1,3 +1,4 @@
+$(document).ready(() =>{
 var now = moment().format("ddd MMM DD, YYYY hh:mm A");
 var currentHour24 = moment().format("HH");
 var currentHour12 = moment().format('hh');
@@ -66,7 +67,7 @@ $('.description').on('click', function(){
   $el.replaceWith(task);
   
   var save = function(){
-    var $p = $('<p/>')
+    var $p = $('<textarea/>')
       .addClass(className)
       .attr('id', elId)
       .text(task.val());
@@ -80,10 +81,14 @@ $('.description').on('click', function(){
 });
 
 $(".saveBtn").on("click", function() {
-  var taskText = $(this).next().val();
-  console.log(taskText);
+  var taskText = $(this).siblings('.description').val();
+  var time = $(this).siblings('.hour').attr('id');
+  console.log(time);
+  localStorage.setItem(time, taskText);
 });
+
+var keepStorage
 
 displayDate();
 checkAllTimes();
-
+});
