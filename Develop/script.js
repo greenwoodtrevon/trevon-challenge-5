@@ -85,10 +85,44 @@ $(".saveBtn").on("click", function() {
   var time = $(this).siblings('.hour').attr('id');
   console.log(time);
   localStorage.setItem(time, taskText);
+  console.log('cool');
 });
 
-var keepStorage
+var keepStorage = function() {
+  var a9 = localStorage.getItem('9AM');
+  var a10 = localStorage.getItem('10AM');
+  var a11 = localStorage.getItem('11AM');
+  var p12 = localStorage.getItem('12PM');
+  var p1 = localStorage.getItem('1PM');
+  var p2 = localStorage.getItem('2PM');
+  var p3 = localStorage.getItem('3PM');
+  var p4 = localStorage.getItem('4PM');
+  var p5 = localStorage.getItem('5PM');
+  var p6 = localStorage.getItem('6PM');
+  var p7 = localStorage.getItem('7PM');
+  var p8 = localStorage.getItem('8PM');
+  var p9 = localStorage.getItem('9PM');
+  var p10 = localStorage.getItem('10PM');
+  var p11 = localStorage.getItem('11PM');
 
+  nineA.text(a9);
+  tenA.text(a10);
+  elevA.text(a11);
+  twelP.text(p12);
+  oneP.text(p1);
+  twoP.text(p2);
+  thrP.text(p3);
+  fourP.text(p4);
+  fiveP.text(p5);
+  sixP.text(p6);
+  sevP.text(p7);
+  eightP.text(p8);
+  nineP.text(p9);
+  tenP.text(p10);
+  elevP.text(p11);
+};
+
+keepStorage();
 displayDate();
 checkAllTimes();
 });
