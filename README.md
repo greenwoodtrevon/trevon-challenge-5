@@ -7,8 +7,8 @@ Users can add tasks in slots for each hour of the day from 9 Am to 11 Pm
 HTML, CSS, & JS
 
 ## Website
-https://greenwoodtrevon.github.io/challenge-2/
+https://greenwoodtrevon.github.io/trevon-challenge-5/
 
 ## Screenshots
-![screenshot1](./screenshot-1.png)
-![screenshot1](./screenshot-2.png)
+![Screenshot1](./Screenshot-1.png)
+![Screenshot2](./Screenshot-2.png)
